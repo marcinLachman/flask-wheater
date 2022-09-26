@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+{{ coutry_city}}
+
+<div class="d-flex flex-column bd-highlight mb-3 mt-5">
+    <div class="p-2 bd-highlight text-left">
+        <div class="card">
+            <h4 class="card-header text-center m-2">
+                <img src="http://openweathermap.org/img/w/{{data_fisrt.icon}}.png" alt="weather image" />
+                {{ fisrt_city }}
+            </h4>
+            <div class="card-body">
+                <h5 class="card-title">Aktualna godzina jest: {{ actual_time_first }}</h5>
+                <p class="card-text">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Temperatura: {{ data_fisrt.temp }} &#8451;</li>
+                        <li class="list-group-item">Oczuwalna Temperatura: {{ data_fisrt.feels_like }} &#8451;</li>
+                        <li class="list-group-item">Ciśnienie: {{ data_fisrt.pressure }} hPa</li>
+                        <li class="list-group-item">Wilgotność: {{ data_fisrt.humidity }}%</li>
+                    </ul>
+                </p>
+
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="p-2 bd-highlight text-left">
+        <div class="card">
+        <h4 class="card-header text-center m-2">
+            <img src="http://openweathermap.org/img/w/{{data_second.icon}}.png" alt="weather image" />
+            {{ second_city }}
+        </h4>
+            <div class="card-body">
+                <h5 class="card-title">Aktualna godzina jest: {{ actual_time_second }}</h5>
+                <p class="card-text">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Temperatura: {{ data_second.temp }} &#8451;</li>
+                    <li class="list-group-item">Oczuwalna Temperatura: {{ data_second.feels_like }} &#8451;</li>
+                    <li class="list-group-item">Ciśnienie: {{ data_second.pressure }} hPa</li>
+                    <li class="list-group-item">Wilgotność: {{ data_second.humidity }}%</li>
+                </ul>
+                </p>
+            
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="p-2 bd-highlight text-left">
+        <div class="card">
+            <h4 class="card-header text-center m-2">
+                <img src="http://openweathermap.org/img/w/{{data_third.icon}}.png" alt="weather image" />
+                {{ third_city }}
+            </h4>
+            <div class="card-body">
+                <h5 class="card-title">Aktualna godzina jest: {{ actual_time_third }}</h5>
+                <p class="card-text">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Temperatura: {{ data_third.temp }} &#8451;</li>
+                    <li class="list-group-item">Oczuwalna Temperatura: {{ data_third.feels_like }} &#8451;</li>
+                    <li class="list-group-item">Ciśnienie: {{ data_third.pressure }} hPa</li>
+                    <li class="list-group-item">Wilgotność: {{ data_third.humidity }}%</li>
+                </ul>
+                </p>
+    
+                <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
